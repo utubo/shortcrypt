@@ -80,6 +80,7 @@ a {
   color: var(--silver);
   overflow-wrap: anywhere;
   padding: 4px;
+  white-space: pre-wrap;
 }
 
 .decrypted  {
