@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <div class="main">
+
+    <h1><a href="./" class="title">Shortcrypt</a></h1>
+
+    <div id="startPage" class="page hidden">
+      <h2>Generate URL for encrypt a message</h2>
+      <label>Password</label>
+      <input type="password" id="encPass" class="password">
+      <label>URL</label>
+      <a id="receiveBoxLink" href="#"></a>
+    </div>
+
+    <div id="encPage" class="page hidden">
+      <h2>Generate URL of a crypted message with <span id="toName"></span></h2>
+      <label>Plain message</label>
+      <textarea type="text" id="plainText" rows="5"></textarea>
+      <label>URL</label>
+      <a id="cryptedLink" href="#"></a>
+    </div>
+
+    <div id="decPage" class="page hidden">
+      <h2>Decrypt message</h2>
+      <label>Password</label>
+      <input type="password" id="decPass" class="password">
+      <input type="button" value="Decrypt" id="decBtn">
+      <label>Message</label>
+      <div id="decryptedText" class="decrypt-area">
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/mtaketani113/cryptico@1.0.1/cryptico.min.js"></script>
+  <script src="script.js"></script>
+  </body>
+</html>
+
