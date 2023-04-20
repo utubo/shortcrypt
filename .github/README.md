@@ -1,6 +1,6 @@
 # Shortcrypt
 
-Simple page to RSA encrypt short text.
+A easy page to RSA encrypt short text.
 
 ## Usage
 1. Bob (he wants to receive a message) opens [here](https://utubo.github.io/shortcrypt/), inputs a password, and the URL of the page for encryption is generated.
