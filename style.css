@@ -38,14 +38,10 @@ h2 {
   font-size: 1em;
   font-weight: bold;
 }
-h2::before {
-  content: '#';
-  display: span;
-}
 
 label {
   display: block;
-  padding-top: 1em;
+  margin-top: 1em;
 }
 
 a {
@@ -55,7 +51,7 @@ a {
   overflow-wrap: anywhere;
 }
 
-.password, textarea {
+.password, .bob, textarea {
   background: var(--gray);
   border-radius: 4px;
   border: 2px solid;
@@ -70,7 +66,7 @@ a {
   border-color: var(--blue);
 }
 
-.password {
+.password, .bob {
   max-width: 200px;
 }
 
@@ -92,9 +88,9 @@ a {
 }
 
 #decBtn {
-  border: none;
-  border-radius: 4px;
   background: var(--blue);
+  border-radius: 4px;
+  border: none;
   color: var(--bg);
   outline: none;
   padding: 8px 20px;
@@ -112,5 +108,10 @@ a {
   text-align: center;
   text-decoration: none;
   width: 1em;
+}
+
+footer {
+  border-top: 1px solid;
+  margin-top: 1em;
 }
 

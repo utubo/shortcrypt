@@ -14,6 +14,8 @@
 
     <div id="startPage" class="page hidden">
       <h2>Generate URL for encrypt a message</h2>
+      <label>Name(Optional)</label>
+      <input type="text" id="bob" class="bob">
       <label>Password</label>
       <input type="password" id="encPass" class="password">
       <label>URL</label>
@@ -21,10 +23,10 @@
     </div>
 
     <div id="encPage" class="page hidden">
-      <h2>Generate URL of a crypted message with <span id="toName"></span></h2>
+      <h2>Generate URL of a crypted message<span class="to-bob hidden"> to {bob}</span></h2>
       <label>Message</label>
       <textarea type="text" id="plainText" rows="5"></textarea>
-      <label>URL</label>
+      <label>URL (Send this url<span class="to-bob hidden"> to {bob}</span>)</label>
       <a id="cryptedLink" href="#"></a>
     </div>
 
@@ -38,7 +40,9 @@
       </div>
     </div>
 
-    <a class="to-github" href="https://github.com/utubo/shortcrypt">?</a>
+    <footer>
+      <a class="to-github" href="https://github.com/utubo/shortcrypt">?</a>
+    </footer>
   </div>
 
   <script src="https://cdn.jsdelivr.net/gh/mtaketani113/cryptico@1.0.1/cryptico.min.js"></script>
