@@ -46,7 +46,11 @@ plainText.addEventListener('input', e => {
   const crypted = cryptico.encrypt(encodeURI(plainText.value), publicKey);
   if (crypted.status === 'success') {
     const url = new URL(location.href);
-    url.search = '?dec' + prefix + '=' + crypted.cipher;
+    url.search = '?dec';
+    if (prefix) {
+      url.search += prefix + '=';
+    }
+    url.search += crypted.cipher;
     url.hash = '';
     cryptedLink.href = url.href;
     cryptedLink.textContent = url.href;
