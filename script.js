@@ -25,7 +25,10 @@ if (location.search.startsWith('?enc')) {
 }
 
 const generateEncURL = e => {
-  const prefix = Math.random().toString(36).substr(2, PREFIX_LEN);
+  const prefix = Math.random()
+    .toString(36)
+    .substr(2, PREFIX_LEN)
+    .padEnd(PREFIX_LEN, 'a');
   const passPhrase = prefix + encPass.value;
   const privateKey = cryptico.generateRSAKey(passPhrase, BITS);
   const publicKey = cryptico.publicKeyString(privateKey);
