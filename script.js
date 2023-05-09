@@ -31,6 +31,7 @@ const setupStartPage = () => {
   bobName.addEventListener('input', generateEncURL);
 
   createEncKeyBtn.addEventListener('click', e => {
+    encPass.value = '';
     while (encPass.value.length < DEFAULT_KEY_LEN) {
       encPass.value += Math.random().toString(36).substr(2, DEFAULT_KEY_LEN);
     }
