@@ -39,6 +39,10 @@ h2 {
   font-weight: bold;
 }
 
+h2 .to-bob {
+  color: var(--blue);
+}
+
 label {
   display: block;
   margin-top: 1em;
