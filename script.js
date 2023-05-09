@@ -21,14 +21,14 @@ const setupTopPage = () => {
     const privateKey = cryptico.generateRSAKey(passPhrase, BITS);
     const publicKey = cryptico.publicKeyString(privateKey);
     const url = new URL(location.href);
-    url.hash = encodeURI(bob.value);
+    url.hash = encodeURI(bobName.value);
     url.search = '?enc' + prefix + '=' + publicKey;
     receiveBoxLink.href = url.href;
     receiveBoxLink.textContent = url.href;
   }
 
   encPass.addEventListener('input', generateEncURL);
-  bob.addEventListener('input', generateEncURL);
+  bobName.addEventListener('input', generateEncURL);
 
   createEncKeyBtn.addEventListener('click', e => {
     while (encPass.value.length < DEFAULT_KEY_LEN) {
