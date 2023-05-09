@@ -31,12 +31,10 @@ const setupTopPage = () => {
   bob.addEventListener('input', generateEncURL);
 
   createEncKeyBtn.addEventListener('click', e => {
-    if (encPass.value === '') {
-      while (encPass.value.length < DEFAULT_KEY_LEN) {
-        encPass.value += Math.random().toString(36).substr(2, DEFAULT_KEY_LEN);
-      }
-      generateEncURL();
+    while (encPass.value.length < DEFAULT_KEY_LEN) {
+      encPass.value += Math.random().toString(36).substr(2, DEFAULT_KEY_LEN);
     }
+    generateEncURL();
   });
 
   showEncPass.addEventListener('change', () => {
