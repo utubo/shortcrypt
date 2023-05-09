@@ -87,7 +87,7 @@ a {
   color: var(--red);
 }
 
-#decBtn {
+input[type=button] {
   background: var(--blue);
   border-radius: 4px;
   border: none;

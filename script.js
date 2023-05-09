@@ -30,14 +30,14 @@ const setupTopPage = () => {
   encPass.addEventListener('input', generateEncURL);
   bob.addEventListener('input', generateEncURL);
 
-  setTimeout(() => {
+  createEncKeyBtn.addEventListener('click', e => {
     if (encPass.value === '') {
       while (encPass.value.length < DEFAULT_KEY_LEN) {
         encPass.value += Math.random().toString(36).substr(2, DEFAULT_KEY_LEN);
       }
       generateEncURL();
     }
-  }, 500);
+  });
 
   showEncPass.addEventListener('change', () => {
     encPass.setAttribute('type', showEncPass.checked ? 'text': 'password');
