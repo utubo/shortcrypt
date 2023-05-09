@@ -32,8 +32,9 @@ const setupStartPage = () => {
 
   createEncKeyBtn.addEventListener('click', e => {
     encPass.value = '';
-    while (encPass.value.length < DEFAULT_KEY_LEN) {
-      encPass.value += Math.random().toString(36).substr(2, DEFAULT_KEY_LEN);
+    const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()';
+    for (let i = 0; i < DEFAULT_KEY_LEN; i ++) {
+      encPass.value += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     generateEncURL();
   });
