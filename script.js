@@ -9,7 +9,7 @@ if (data && data[PREFIX_LEN] === '=') {
   data = data.substr(PREFIX_LEN + 1);
 }
 
-const setupTopPage = () => {
+const setupStartPage = () => {
   startPage.classList.remove('hidden');
 
   const generateEncURL = e => {
@@ -109,6 +109,6 @@ if (location.search.startsWith('?enc')) {
 } else if (location.search.startsWith('?dec')) {
   setupDecPage();
 } else {
-  setupTopPage();
+  setupStartPage();
 }
 
