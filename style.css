@@ -100,20 +100,6 @@ input[type=button] {
   padding: 8px 20px;
 }
 
-.to-github {
-  background: var(--blue);
-  border-radius: 50%;
-  color: var(--bg);
-  display: inline-block;
-  font-size: .8em;
-  height: 1em;
-  line-height: 1;
-  padding: 2px;
-  text-align: center;
-  text-decoration: none;
-  width: 1em;
-}
-
 footer {
   border-top: 1px solid;
   margin-top: 1em;
