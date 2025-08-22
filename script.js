@@ -13,6 +13,11 @@ const setupStartPage = () => {
   startPage.classList.remove('hidden');
 
   const generateEncURL = e => {
+    if (!encPass.value) {
+      receiveBoxLink.href = '#';
+      receiveBoxLink.textContent = '';
+      return;
+    }
     const prefix = Math.random()
       .toString(36)
       .substr(2, PREFIX_LEN)
